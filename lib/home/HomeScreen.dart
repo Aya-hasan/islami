@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
         backgroundColor: Colors.transparent,
        appBar:  AppBar(
-    title:const Text('إسلامي'),),
+    title:const Text('Islami'),),
 bottomNavigationBar: BottomNavigationBar(
   currentIndex:selectedIndex ,
 onTap: (index) {
@@ -33,27 +33,29 @@ setState(() {
   selectedIndex=index;
 });
 },
-    items:const [ BottomNavigationBarItem(
-      backgroundColor: MyTheme.primaryColor,
-        label: 'الراديو',
+    items:const [
 
-        icon: ImageIcon(AssetImage('assets/images/radio_blue.png'),size: 48,)),
+
+
       BottomNavigationBarItem(
           backgroundColor: MyTheme.primaryColor,
-          label: 'التسبيح',
-
-          icon: ImageIcon(AssetImage('assets/images/sebha_blue.png'),size: 48,)),
+          label: 'Quran',
+          icon: ImageIcon(AssetImage('assets/images/moshaf_blue.png'),size: 48,)),
       BottomNavigationBarItem(
           backgroundColor: MyTheme.primaryColor,
-          label: 'الاحاديث',
+          label: 'Hadith',
 
           icon: ImageIcon(AssetImage('assets/images/hadith.png'),size: 48,)),
       BottomNavigationBarItem(
           backgroundColor: MyTheme.primaryColor,
-          label: 'القرآن',
-          icon: ImageIcon(AssetImage('assets/images/moshaf_blue.png'),size: 48,)),
+          label: 'Tasbih',
 
+          icon: ImageIcon(AssetImage('assets/images/sebha_blue.png'),size: 48,)),
+      BottomNavigationBarItem(
+          backgroundColor: MyTheme.primaryColor,
+          label: 'radio',
 
+          icon: ImageIcon(AssetImage('assets/images/radio_blue.png'),size: 48,)),
 
     ]),
     body: tabs[selectedIndex],
@@ -61,5 +63,5 @@ setState(() {
     );
 
   }
-  List<Widget> tabs=[radioTap(),tasbihTap(),hadithTap(),quranTap()];
+  List<Widget> tabs=[quranTap(),hadithTap(),tasbihTap(),radioTap()];
 }
