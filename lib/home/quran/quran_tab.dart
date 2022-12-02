@@ -25,7 +25,7 @@ class quranTap extends StatelessWidget{
         ),
           Padding(
             padding: const EdgeInsets.all(6.0),
-            child: Text('اسم السورة',style: TextStyle(fontSize: 28),),
+            child: Text('ChapterName',style: TextStyle(fontSize: 28),),
           ),
           Container(color: Theme.of(context).primaryColor,
             height: 2,
