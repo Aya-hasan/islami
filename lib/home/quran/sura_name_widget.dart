@@ -14,7 +14,7 @@ class sura_name_widget extends StatelessWidget{
 
      },
      child: Container(alignment: Alignment.center,
-       child:Text(title,style: TextStyle(fontSize: 28)) ,),
+       child:Text(title,style:Theme.of(context).textTheme.headline4 ) ,),
    );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/MyTheme.dart';
 import 'package:islami/home/quran/sura_name_widget.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizatons.dart';
 class quranTap extends StatelessWidget{
   List<String> name=["الفاتحه","البقرة","آل عمران","النساء","المائدة","الأنعام","الأعراف","الأنفال","التوبة","يونس","هود"
   ,"يوسف","الرعد","إبراهيم","الحجر","النحل","الإسراء","الكهف","مريم","طه","الأنبياء","الحج","المؤمنون"
@@ -25,19 +25,21 @@ class quranTap extends StatelessWidget{
         ),
           Padding(
             padding: const EdgeInsets.all(6.0),
-            child: Text('ChapterName',style: TextStyle(fontSize: 28),),
+            child: Text(AppLocalizations.of(context)!.chapter_name,
+                style: Theme.of(context).textTheme.headline4),
           ),
           Container(color: Theme.of(context).primaryColor,
             height: 2,
           ),
           Expanded(flex: 3,
-            child: ListView.separated(itemBuilder: (_,index){
+            child:
+            ListView.separated(itemBuilder: (_,index){
               return sura_name_widget(name[index],index) ;},
 
                separatorBuilder: (_, index) {return Container(
                  margin: EdgeInsets.symmetric(horizontal: 20),
                  height: 1,
-                 width: double.infinity,color: Theme.of(context).primaryColor,) ;},
+                 width: double.infinity,color: Theme.of(context).accentColor,) ;},
                 itemCount:name.length),
           ),
          
