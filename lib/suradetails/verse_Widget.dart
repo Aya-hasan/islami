@@ -12,7 +12,7 @@ verseWidget(this.content,this.index);
       alignment: Alignment.center,
       child: Text('$content [$index]',
         textDirection:TextDirection. rtl,
-        style:TextStyle(fontSize: 18) ,textAlign:TextAlign.center,),
+        style:Theme.of(context).textTheme.headline6),
     );
   }
 }
